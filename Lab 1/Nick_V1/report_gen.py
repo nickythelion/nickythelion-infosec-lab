@@ -30,7 +30,7 @@ def write_batch_file(file: TextIOWrapper, index: int):
 
 
 def write_text_file(file: TextIOWrapper, t: str):
-    with open(t, "r") as v:
+    with open(t, "r", encoding="utf-8") as v:
         file.write(v.read())
 
 
@@ -38,8 +38,12 @@ def main():
     if os.path.exists("БНВ.txt"):
         os.remove("БНВ.txt")
 
-    with open("БНВ.txt", "x") as report:
+    with open("БНВ.txt", "x", encoding="utf8") as report:
         write_header(report)
         write_text_file(report, "task_1.txt")
         for i in range(2, 7):
             write_batch_file(report, i)
+
+
+if __name__ == "__main__":
+    main()
