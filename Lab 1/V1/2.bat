@@ -1,6 +1,6 @@
 @echo off
-dir /b > C:\TEMP\RENFILE_2.doc
+dir /b *.sys DEF*.*> C:\TEMP\RENFILE.doc
 ren *.sys WDW*.sys
 ren DEF*.* FED*.*
-echo. >> C:\TEMP\RENFILE_2.doc
-dir /b >> C:\TEMP\RENFILE_2.doc
+echo. >> C:\TEMP\RENFILE.doc
+dir /b WDW*.sys FED*.*>> C:\TEMP\RENFILE.doc

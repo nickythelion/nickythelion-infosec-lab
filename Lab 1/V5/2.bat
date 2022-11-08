@@ -1,6 +1,6 @@
 @echo off
-dir /b >> RENFILE.txt
+dir /b *.doc > RENFILE.txt
 ren *.doc *.dot
 ren W*.dot V*.dot
-echo. >> RENFILE.txt
+echo. *.dot >> RENFILE.txt
 dir /b >> RENFILE.txt
